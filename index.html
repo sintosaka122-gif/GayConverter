@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>are you gay</title>
+
+<style>
+body {
+    text-align:center;
+    background:skyblue;
+    font-family:ariel;
+    overflow:hidden;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+button {
+    font-size: 22px;
+    padding: 12px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#noBtn {
+    position:absolute;
+    transition: 0.1s; /* Makes the movement smoother */
+}
+
+#box {
+    display:none;
+    background:white;
+    padding:20px;
+    margin-top:20px;
+    border-radius:12px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* NEW: The Reservation/Appropriation Page */
+#approvalPage {
+    display:none;
+    background:#e6fffa;
+    padding:30px;
+    margin-top:20px;
+    border-radius:12px;
+    border: 2px solid #00b894;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.emoji-cool {
+    font-size: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<h1> are you gay</h1>
+
+<button onclick="yes()">YES</button>
+<button id="noBtn" onmouseover="moveNo()">NO</button>
+
+<p id="msg"></p>
+
+<!-- Date Picker Section -->
+<div id="box">
+     Pick a date:<br><br>
+
+    <input type="datetime-local" id="datePick"><br><br>
+
+    <button onclick="confirmDate()">Confirm</button>
+
+    <p id="dateMsg" style="color:red;"></p>
+</div>
+
+<!-- NEW: Reservation/Confirmation Page -->
+<div id="approvalPage">
+    <div class="emoji-cool">🎉</div>
+    <h2>Reservation Confirmed!</h2>
+    <p>Here are your appropriation details:</p>
+    <div id="finalDetails" style="font-size: 18px; font-weight:bold; color:#2d3436;"></div>
+    <br>
+    <button onclick="reset()">Edit Date</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
